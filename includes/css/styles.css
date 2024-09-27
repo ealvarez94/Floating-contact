@@ -1,0 +1,132 @@
+.floating-contact {
+    position: fixed;
+    z-index: 9999;
+}
+.floating-contact-phone {
+    background-color: #0077BD;
+    color: #fff;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 24px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 9999;
+}
+.floating-contact-whatsapp {
+    background-color: #0077BD;
+    color: #fff;
+    position: fixed;
+    bottom: 20px;
+    right: 100px;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 24px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 9999;
+}
+.floating-contact-phone-number {
+    display: none;
+    position: fixed;
+    bottom: 120px;
+    right: 30px;
+    color: #0077BD;
+    background-color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 9999;
+    font-size: 23px;
+    text-align: center;
+}
+.floating-contact-whatsapp-number {
+    display: none;
+    position: fixed;
+    bottom: 120px;
+    right: 30px;
+    color: #0077BD;
+    background-color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 9999;
+    font-size: 23px;
+    text-align: center;
+}
+.callMiniTitle {
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: -5px;
+}
+.floating-contact-phone:hover, .floating-contact-whatsapp:hover {
+    color: #0077BD !important;
+    background: white !important;
+    /*Make smooth*/
+    transition: all 0.3s ease-in-out;
+}
+
+/*floating-contact-mobile makes links full width squares*/
+.floating-contact-mobile {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    z-index: 9999;
+    width: 100%;
+}
+.floating-contact-mobile a {
+    background-color: #0077BD;
+    color: #fff;
+    border-radius: 0;
+    width: 50%;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 19px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 9999;
+    float: left;
+}
+
+.floating-contact-mobile .floating-contact-whatsapp, .floating-contact-mobile .floating-contact-phone {
+    position: initial;
+}
+
+.floating-contact-mobile .floating-contact-phone{
+    width: 75%;
+    background-color: #0077BD;
+    padding-top: 1px;
+}
+.floating-contact-mobile .floating-contact-whatsapp{
+    width: 25%;
+    padding-top: 3px;
+}
+
+/*media queries to show mobileFloatingContact and hide desktopFloatingContact*/
+@media (max-width: 768px) {
+    .desktopFloatingContact {
+        display: none;
+    }
+    .floating-contact {
+        display: none;
+    }
+}
+/*media queries to show desktopFloatingContact and hide mobileFloatingContact*/
+@media (min-width: 769px) {
+    .mobileFloatingContact {
+        display: none;
+    }
+    .floating-contact-mobile {
+        display: none;
+    }
+}
